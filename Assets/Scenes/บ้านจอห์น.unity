@@ -97,8 +97,8 @@ LightmapSettings:
     m_ExportTrainingData: 0
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
-  m_LightingDataAsset: {fileID: 0}
-  m_LightingSettings: {fileID: 0}
+  m_LightingDataAsset: {fileID: 112000000, guid: 80d1cc9eb4077324ca1b0d0e3c2cdc6a, type: 2}
+  m_LightingSettings: {fileID: 4890085278179872738, guid: 352190e64263cdb4f9baa92fdee63b47, type: 2}
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -649,8 +649,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 1
   m_ShadowVolumeIntensity: 1
   m_LocalBounds:
-    m_Center: {x: -0.000050008297, y: -0.0046000183, z: 0}
-    m_Extent: {x: 1.0069499, y: 0.9964, z: 0}
+    m_Center: {x: 0.000100016594, y: -0.0046000183, z: 0}
+    m_Extent: {x: 1.007, y: 0.997, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -1697,8 +1697,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 1
   m_ShadowVolumeIntensity: 1
   m_LocalBounds:
-    m_Center: {x: 0.00045001507, y: -0.0051499903, z: 0}
-    m_Extent: {x: 1.00745, y: 0.99705005, z: 0}
+    m_Center: {x: 0.00034999847, y: -0.005549997, z: 0}
+    m_Extent: {x: 1.00605, y: 0.99654996, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -3288,8 +3288,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 1
   m_ShadowVolumeIntensity: 1
   m_LocalBounds:
-    m_Center: {x: 0.00040000677, y: -0.0052000284, z: 0}
-    m_Extent: {x: 1.0067999, y: 0.9964, z: 0}
+    m_Center: {x: 0.00049996376, y: -0.0046499968, z: 0}
+    m_Extent: {x: 1.0071, y: 0.99675, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
