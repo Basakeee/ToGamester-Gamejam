@@ -397,7 +397,7 @@ VisualEffect:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 256473846}
   m_Enabled: 1
-  m_Asset: {fileID: 8926484042661614526, guid: 7ea1c208a59c39c4da3030a7b58e9988, type: 3}
+  m_Asset: {fileID: 8926484042661614526, guid: 993c238f92128df418f4b5519815ef81, type: 3}
   m_InitialEventName: OnPlay
   m_InitialEventNameOverriden: 0
   m_StartSeed: 0
@@ -406,7 +406,10 @@ VisualEffect:
   m_ResourceVersion: 1
   m_PropertySheet:
     m_Float:
-      m_Array: []
+      m_Array:
+      - m_Value: 21.92
+        m_Name: Size
+        m_Overridden: 1
     m_Vector2f:
       m_Array: []
     m_Vector3f:
@@ -760,8 +763,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 1
   m_ShadowVolumeIntensity: 1
   m_LocalBounds:
-    m_Center: {x: -0.00024998188, y: -0.0050500035, z: 0}
-    m_Extent: {x: 1.00705, y: 0.99585, z: 0}
+    m_Center: {x: 0.00050002337, y: -0.0046499968, z: 0}
+    m_Extent: {x: 1.0062001, y: 0.99584997, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -1202,7 +1205,7 @@ Camera:
     height: 1
   near clip plane: 0.3
   far clip plane: 1000
-  field of view: 5
+  field of view: 3
   orthographic: 0
   orthographic size: 5
   m_Depth: -1
@@ -1229,7 +1232,7 @@ Transform:
   m_GameObject: {fileID: 679148573}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 13.3, y: 0.5, z: -76.2}
+  m_LocalPosition: {x: 17, y: 2.1, z: -200}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1808,8 +1811,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 1
   m_ShadowVolumeIntensity: 1
   m_LocalBounds:
-    m_Center: {x: 0, y: -0.0053499937, z: 0}
-    m_Extent: {x: 1.0061, y: 0.99685, z: 0}
+    m_Center: {x: 0.0009999871, y: -0.0049000084, z: 0}
+    m_Extent: {x: 1.0067, y: 0.9958, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -3300,7 +3303,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1911487127
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3399,8 +3402,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 1
   m_ShadowVolumeIntensity: 1
   m_LocalBounds:
-    m_Center: {x: 0.00040000677, y: -0.0050500035, z: 0}
-    m_Extent: {x: 1.0069001, y: 0.99635, z: 0}
+    m_Center: {x: 0.00015002489, y: -0.0043500364, z: 0}
+    m_Extent: {x: 1.0064499, y: 0.99595, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
