@@ -1,0 +1,457 @@
+fileFormatVersion: 2
+guid: 18fe7cab961cdd043b0e0ad649aa8fd1
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 1280
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: dominic-garcia-tumblr-ojn6bb7cfk1w36evao1-1280_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 498.6667
+        width: 256
+        height: 249.33333
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 401638f35d37a3e46acb94e4f2fbb8ec
+      internalID: -1436062880
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dominic-garcia-tumblr-ojn6bb7cfk1w36evao1-1280_1
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 498.6667
+        width: 256
+        height: 249.33333
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1972a82507b038e44aefa2e62214454d
+      internalID: -806180693
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dominic-garcia-tumblr-ojn6bb7cfk1w36evao1-1280_2
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 498.6667
+        width: 256
+        height: 249.33333
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ead9106865f42eb4eb379a935cbc9dbb
+      internalID: 1509098467
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dominic-garcia-tumblr-ojn6bb7cfk1w36evao1-1280_3
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 498.6667
+        width: 256
+        height: 249.33333
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fcea3c940e49f4841a99ed4d08f857e1
+      internalID: 564594926
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dominic-garcia-tumblr-ojn6bb7cfk1w36evao1-1280_4
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 498.6667
+        width: 256
+        height: 249.33333
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 77fa983c14ca1de43875e3a6c687a822
+      internalID: 744397345
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dominic-garcia-tumblr-ojn6bb7cfk1w36evao1-1280_5
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 249.66667
+        width: 256
+        height: 249.33333
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 46fe0218076d84545ac00b8c8af5f259
+      internalID: 634874581
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dominic-garcia-tumblr-ojn6bb7cfk1w36evao1-1280_6
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 249.66667
+        width: 256
+        height: 249.33333
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 86f059e9d287e1a4ab6699566070d0ed
+      internalID: -1123338023
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dominic-garcia-tumblr-ojn6bb7cfk1w36evao1-1280_7
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 249.66667
+        width: 256
+        height: 249.33333
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 18a4e6633a93fce4282e54e839cd86c9
+      internalID: 1605553367
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dominic-garcia-tumblr-ojn6bb7cfk1w36evao1-1280_8
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 249.66667
+        width: 256
+        height: 249.33333
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4fd540cc67f0936419f9845c8a8f3f2a
+      internalID: -1415483881
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dominic-garcia-tumblr-ojn6bb7cfk1w36evao1-1280_9
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 249.66667
+        width: 256
+        height: 249.33333
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7a0be7de4650da34399fe59f4a523430
+      internalID: 1855962532
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dominic-garcia-tumblr-ojn6bb7cfk1w36evao1-1280_10
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0.66667175
+        width: 256
+        height: 249.33333
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 81673b8360246cc4abe5058023c2538b
+      internalID: -1324366626
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dominic-garcia-tumblr-ojn6bb7cfk1w36evao1-1280_11
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 0.66667175
+        width: 256
+        height: 249.33333
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 63aacb5ea46c87745bffa3c0deae15e1
+      internalID: -826461968
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dominic-garcia-tumblr-ojn6bb7cfk1w36evao1-1280_12
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 0.66667175
+        width: 256
+        height: 249.33333
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 742f191d667f05341a60530d74dcd506
+      internalID: 694475103
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dominic-garcia-tumblr-ojn6bb7cfk1w36evao1-1280_13
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 0.66667175
+        width: 256
+        height: 249.33333
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a0dacbed50897f1458f4847a7e8685a8
+      internalID: -1035798879
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dominic-garcia-tumblr-ojn6bb7cfk1w36evao1-1280_14
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 0.66667175
+        width: 256
+        height: 249.33333
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1caeb92f617c81b458d76d16ef7bf7a9
+      internalID: -570601684
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      dominic-garcia-tumblr-ojn6bb7cfk1w36evao1-1280_0: -1436062880
+      dominic-garcia-tumblr-ojn6bb7cfk1w36evao1-1280_1: -806180693
+      dominic-garcia-tumblr-ojn6bb7cfk1w36evao1-1280_10: -1324366626
+      dominic-garcia-tumblr-ojn6bb7cfk1w36evao1-1280_11: -826461968
+      dominic-garcia-tumblr-ojn6bb7cfk1w36evao1-1280_12: 694475103
+      dominic-garcia-tumblr-ojn6bb7cfk1w36evao1-1280_13: -1035798879
+      dominic-garcia-tumblr-ojn6bb7cfk1w36evao1-1280_14: -570601684
+      dominic-garcia-tumblr-ojn6bb7cfk1w36evao1-1280_2: 1509098467
+      dominic-garcia-tumblr-ojn6bb7cfk1w36evao1-1280_3: 564594926
+      dominic-garcia-tumblr-ojn6bb7cfk1w36evao1-1280_4: 744397345
+      dominic-garcia-tumblr-ojn6bb7cfk1w36evao1-1280_5: 634874581
+      dominic-garcia-tumblr-ojn6bb7cfk1w36evao1-1280_6: -1123338023
+      dominic-garcia-tumblr-ojn6bb7cfk1w36evao1-1280_7: 1605553367
+      dominic-garcia-tumblr-ojn6bb7cfk1w36evao1-1280_8: -1415483881
+      dominic-garcia-tumblr-ojn6bb7cfk1w36evao1-1280_9: 1855962532
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
