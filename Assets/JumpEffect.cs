@@ -2,10 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.VFX;
+
 public class JumpEffect : MonoBehaviour
 {
     public VisualEffect _jump;
-    public Transform _JumpPos;
     // Start is called before the first frame update
     void Start()
     {
@@ -25,9 +25,8 @@ public class JumpEffect : MonoBehaviour
 
     public void endJump()
     {
-        VisualEffect newJump = Instantiate(_jump, _JumpPos.transform, _JumpPos.transform);
+        VisualEffect newJump = Instantiate(_jump, transform.position, transform.rotation);
         newJump.Play();
         Destroy(newJump, 1.5f);
-        Debug.Log("Jump");
     }
 }

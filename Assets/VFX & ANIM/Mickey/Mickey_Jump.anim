@@ -79,14 +79,14 @@ AnimationClip:
   - time: 0
     functionName: startJump
     data: 
-    objectReferenceParameter: {fileID: 0}
+    objectReferenceParameter: {fileID: 11500000, guid: b407c3022c744cd459358c4ae0cc441c, type: 3}
     floatParameter: 0
     intParameter: 0
     messageOptions: 0
   - time: 1
     functionName: endJump
     data: 
-    objectReferenceParameter: {fileID: 0}
+    objectReferenceParameter: {fileID: 11500000, guid: b407c3022c744cd459358c4ae0cc441c, type: 3}
     floatParameter: 0
     intParameter: 0
     messageOptions: 0
