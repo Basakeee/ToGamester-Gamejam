@@ -20,13 +20,13 @@ public class JumpEffect : MonoBehaviour
 
     public void startJump()
     {
-
+        VisualEffect newJump = Instantiate(_jump, transform.position, transform.rotation);
+        newJump.Play();
+        Destroy(newJump, 1.5f);
     }
 
     public void endJump()
     {
-        VisualEffect newJump = Instantiate(_jump, transform.position, transform.rotation);
-        newJump.Play();
-        Destroy(newJump, 1.5f);
+        
     }
 }
