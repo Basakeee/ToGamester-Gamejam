@@ -7,7 +7,8 @@ public class Movement : MonoBehaviour
     #region PlayerModifier
     private float xAxis => Input.GetAxisRaw("Horizontal");
     private Rigidbody2D rb => GetComponent<Rigidbody2D>();
-    public bool isGrounded => Physics2D.Raycast(transform.position, Vector2.down, groundCheckRange, layerCheck);
+    private bool isGrounded => Physics2D.Raycast(transform.position, Vector2.down, groundCheckRange, layerCheck);
+    private bool isFacingRight = true;
     [Header("GroundCheck")] 
     public LayerMask layerCheck;
     public float groundCheckRange;
@@ -22,6 +23,7 @@ public class Movement : MonoBehaviour
     [Header("PlayerStats")]
     public float speed;
     public float jumpPower;
+    public float fallMultipier = 2.5f;
     #endregion
 
     // Update is called once per frame
@@ -34,6 +36,17 @@ public class Movement : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.LeftShift) && canDash)
         {
             StartCoroutine(Dash());
+        }
+        if (isFacingRight && Input.GetKeyDown(KeyCode.A) || !isFacingRight && Input.GetKeyDown(KeyCode.D))
+        {
+            isFacingRight = !isFacingRight;
+            Vector3 LC = transform.localScale;
+            LC.x *= -1;
+            transform.localScale = LC;
+        }
+        if (rb.velocity.y < 0f)
+        {
+            rb.velocity += Vector2.up * Physics2D.gravity.y * (fallMultipier - 1) * Time.deltaTime;
         }
     }
     private void FixedUpdate()
