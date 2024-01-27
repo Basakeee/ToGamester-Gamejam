@@ -9,14 +9,19 @@ public class Date : MonoBehaviour
     public TMP_Text yearText;
     private int Month;
     private int Year;
+    private void Start()
+    {
+        Year = 2020;
+    }
 
     void Update()
     {
         monthText.text = Month.ToString();
         yearText.text = Year.ToString();
-        if(Month % 12 == 0)
+        if(Month % 13 == 0)
         {
-            Month %= 12;
+            Month %= 13;
+        Month++;
         }
     }
 
@@ -26,6 +31,7 @@ public class Date : MonoBehaviour
     }
     public void RemoveMonth()
     {
+        if(Month > 0)
         Month--;
     }
     public void AddYear()
@@ -34,6 +40,7 @@ public class Date : MonoBehaviour
     }
     public void RemoveYear()
     {
+        if(Year > 0) 
         Year--;
     }
     public int Calc()
