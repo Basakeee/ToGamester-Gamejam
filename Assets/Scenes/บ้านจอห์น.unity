@@ -33,7 +33,7 @@ RenderSettings:
   m_HaloTexture: {fileID: 0}
   m_SpotCookie: {fileID: 10001, guid: 0000000000000000e000000000000000, type: 0}
   m_DefaultReflectionMode: 0
-  m_DefaultReflectionResolution: 128
+  m_DefaultReflectionResolution: 2048
   m_ReflectionBounces: 1
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
@@ -775,8 +775,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 1
   m_ShadowVolumeIntensity: 1
   m_LocalBounds:
-    m_Center: {x: 0.00049996376, y: -0.0043500066, z: 0}
-    m_Extent: {x: 1.0064, y: 0.99705, z: 0}
+    m_Center: {x: 0.00045001507, y: -0.005100012, z: 0}
+    m_Extent: {x: 1.00685, y: 0.99590003, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -1691,8 +1691,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 1
   m_ShadowVolumeIntensity: 1
   m_LocalBounds:
-    m_Center: {x: 0.00024998188, y: -0.005399972, z: 0}
-    m_Extent: {x: 1.00605, y: 0.9965, z: 0}
+    m_Center: {x: 0.00050002337, y: -0.0042999983, z: 0}
+    m_Extent: {x: 1.0062001, y: 0.9965, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -3441,8 +3441,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 1
   m_ShadowVolumeIntensity: 1
   m_LocalBounds:
-    m_Center: {x: -0.00030004978, y: -0.004949987, z: 0}
-    m_Extent: {x: 1.0072, y: 0.99695, z: 0}
+    m_Center: {x: 0.00045001507, y: -0.0054499805, z: 0}
+    m_Extent: {x: 1.00615, y: 0.99634993, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
