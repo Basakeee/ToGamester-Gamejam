@@ -10,10 +10,11 @@ public class MusicControt : MonoBehaviour
     public AudioSource audioSource;
     public AudioMixer audioMixer;
     public AudioSource audioSfx;
-    public AudioSource attctk;
+    public AudioSource NPC;
     public Slider slider;
     public Slider sliderMusic;
     public Slider sliderSfx;
+    public Slider sliderNPC;
     // Start is called before the first frame update
     void Start()
     {
@@ -52,5 +53,9 @@ public class MusicControt : MonoBehaviour
     public void SFXslider()
     {
         audioMixer.SetFloat("sfxVolume", sliderSfx.value);
+    }
+    public void NPCslider()
+    {
+        audioMixer.SetFloat("NPCVolume", sliderNPC.value);
     }
 }
