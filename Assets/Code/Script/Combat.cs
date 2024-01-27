@@ -33,6 +33,7 @@ public class Combat : MonoBehaviour
     #endregion
     private bool isATK;
     private bool canTakeDMG = true;
+    public Volume volume;
     private Vector3 off => offset;
     // Start is called before the first frame update
     void Start()
@@ -105,7 +106,10 @@ public class Combat : MonoBehaviour
         curHP += heal;
         healLeft--;
         // haunted effect
-        
+        if(volume.profile.TryGet(out ColorAdjustments colorAdjustments))
+        {
+            colorAdjustments.hueShift.value = -180f;
+        }
     }
     public void iFrame()
     {
