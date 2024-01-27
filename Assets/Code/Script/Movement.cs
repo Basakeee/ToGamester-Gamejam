@@ -29,20 +29,25 @@ public class Movement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space) && isGrounded)
+        if (!Pause.isPaused)
         {
-            rb.AddForce(transform.up * jumpPower, ForceMode2D.Impulse);
+
+
+            if (Input.GetKeyDown(KeyCode.Space) && isGrounded)
+            {
+                rb.AddForce(transform.up * jumpPower, ForceMode2D.Impulse);
+            }
+            if (Input.GetKeyDown(KeyCode.LeftShift) && canDash)
+            {
+                StartCoroutine(Dash());
+            }
+            Flip();
+            if (rb.velocity.y < 0f)
+            {
+                rb.velocity += Vector2.up * Physics2D.gravity.y * (fallMultipier - 1) * Time.deltaTime;
+            }
+            Debug.DrawRay(transform.position, Vector2.down * groundCheckRange, Color.red);
         }
-        if (Input.GetKeyDown(KeyCode.LeftShift) && canDash)
-        {
-            StartCoroutine(Dash());
-        }
-        Flip();
-        if (rb.velocity.y < 0f)
-        {
-            rb.velocity += Vector2.up * Physics2D.gravity.y * (fallMultipier - 1) * Time.deltaTime;
-        }
-        Debug.DrawRay(transform.position, Vector2.down * groundCheckRange, Color.red);  
     }
 
     private void Flip()
