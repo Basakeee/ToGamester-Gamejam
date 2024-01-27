@@ -18,7 +18,7 @@ public class Movement : MonoBehaviour
     private float dashingTime = 0.2f;
     public float dashingPower = 50f;
     public float dashingCooldown = 1f;
-    [SerializeField] private ParticleSystem dust;
+    //[SerializeField] private TrailRenderer tr;
 
     [Header("PlayerStats")]
     public float speed;
@@ -37,25 +37,18 @@ public class Movement : MonoBehaviour
         {
             StartCoroutine(Dash());
         }
-        Flip();
-        if (rb.velocity.y < 0f)
-        {
-            rb.velocity += Vector2.up * Physics2D.gravity.y * (fallMultipier - 1) * Time.deltaTime;
-        }
-    }
-
-    private void Flip()
-    {
         if (isFacingRight && Input.GetKeyDown(KeyCode.A) || !isFacingRight && Input.GetKeyDown(KeyCode.D))
         {
             isFacingRight = !isFacingRight;
             Vector3 LC = transform.localScale;
             LC.x *= -1;
             transform.localScale = LC;
-            
+        }
+        if (rb.velocity.y < 0f)
+        {
+            rb.velocity += Vector2.up * Physics2D.gravity.y * (fallMultipier - 1) * Time.deltaTime;
         }
     }
-
     private void FixedUpdate()
     {
         if (isDashing)
@@ -63,8 +56,6 @@ public class Movement : MonoBehaviour
             return;
         }
         rb.velocity = new Vector2(xAxis * speed, rb.velocity.y);
-        if(rb.velocity.x > 0f && isGrounded )
-            dust.Play();
     }
     private IEnumerator Dash()
     {
@@ -73,7 +64,9 @@ public class Movement : MonoBehaviour
         float originalGravity = rb.gravityScale;
         rb.gravityScale = 0f;
         rb.velocity = new Vector2(transform.localScale.x * dashingPower, 0f);
+        //tr.emitting = true;
         yield return new WaitForSeconds(dashingTime);
+        //tr.emitting = false;
         rb.gravityScale = originalGravity;
         isDashing = false;
         yield return new WaitForSeconds(dashingCooldown);
