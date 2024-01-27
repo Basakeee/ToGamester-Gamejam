@@ -10,6 +10,6 @@ public class Dialogue : ScriptableObject
     public string _DialogueText;
     public Dialogue nextDialogue;
     public bool choice;
-    public AudioSource audio;
+    public AudioClip audio;
     
 }

@@ -8,6 +8,7 @@ public class NPCDialogue : MonoBehaviour
     public LayerMask playerLayer;
     private Collider2D[] hit;
     public Dialogue startDialogue;
+    public AudioSource audio => GetComponent<AudioSource>();
     private void Update()
     {
         hit = Physics2D.OverlapBoxAll(transform.position,new Vector2(CheckRange, CheckRange),0f,playerLayer);
@@ -26,7 +27,7 @@ public class NPCDialogue : MonoBehaviour
     {
         DialogueSystem _ds = GameObject.Find("DialogueSystem").GetComponent<DialogueSystem>();
         if(!_ds.isTyping && _ds.endDialogue)
-            _ds.StartDialogue(_dialogue);
+            _ds.StartDialogue(_dialogue,this);
     }
     private void OnDrawGizmos()
     {

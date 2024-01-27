@@ -15,8 +15,11 @@ public class DialogueSystem : MonoBehaviour
     private Dialogue next;
     [HideInInspector] public Dialogue currentDialogue;
     private bool isEnd;
-    public void StartDialogue(Dialogue nextDialogue)
+    private NPCDialogue npc;
+    public void StartDialogue(Dialogue nextDialogue,NPCDialogue _npc)
     {
+        npc = _npc;
+        npc.audio.clip = nextDialogue.audio;
         next = nextDialogue;
         currentDialogue = nextDialogue;
         ClearDialogue();
@@ -66,7 +69,8 @@ public class DialogueSystem : MonoBehaviour
             if (next != null)
             {
                 StartCoroutine(TypeDialogue(next));
-                next.audio.Play();
+                npc.audio.clip = next.audio;
+                npc.audio.Play();
             }
         }
     }
@@ -82,7 +86,8 @@ public class DialogueSystem : MonoBehaviour
                 if (next != null)
                 {
                     StartCoroutine(TypeDialogue(next));
-                    next.audio.Play();
+                    npc.audio.clip = next.audio;
+                    npc.audio.Play();
                 }
             }
     }
