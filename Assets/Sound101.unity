@@ -1335,8 +1335,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1523701038}
   - component: {fileID: 1523701037}
-  - component: {fileID: 1523701036}
   - component: {fileID: 1523701039}
+  - component: {fileID: 1523701036}
   - component: {fileID: 1523701034}
   - component: {fileID: 1523701040}
   m_Layer: 0
@@ -1619,8 +1619,44 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   audioClips:
   - {fileID: 8300000, guid: ef61b8744954bce41b27cf35999cdc8c, type: 3}
+  - {fileID: 8300000, guid: c0ea8ae6129a04a46b57f871450ec81e, type: 3}
+  - {fileID: 8300000, guid: d1945e7b85d0fdf4da4d492af847dc5a, type: 3}
+  - {fileID: 8300000, guid: 40ff815eff97c084396546dbed5ed530, type: 3}
+  - {fileID: 8300000, guid: 227ccb98035d9fd468c36d2fac3f97e2, type: 3}
+  - {fileID: 8300000, guid: 440113f8d16f21143bb01bbd115b8e36, type: 3}
+  - {fileID: 8300000, guid: 1a6cdcf207cc23a4fbb989e945d6022d, type: 3}
   - {fileID: 8300000, guid: 792869637b914244da42d2a55fb4e928, type: 3}
   - {fileID: 8300000, guid: c536d50c08284f34e9a95d05fe4d7172, type: 3}
+  - {fileID: 8300000, guid: 4f919ec6dbf725c46af0a2829fe933b3, type: 3}
+  - {fileID: 8300000, guid: 77ff803226139ad4a8101bdb3fbe492b, type: 3}
+  - {fileID: 8300000, guid: f359ddf1df5c0c4429c6bd68d744df2f, type: 3}
+  - {fileID: 8300000, guid: 9bfd47a0497fbbf4e9ec4a483c4d278f, type: 3}
+  - {fileID: 8300000, guid: 778919c7d5bcb8741bb493a7e5260d2a, type: 3}
+  - {fileID: 8300000, guid: b1772ff848e7adb4a8b92ac32ed05084, type: 3}
+  - {fileID: 8300000, guid: db86849d184589541898b7093a699ce3, type: 3}
+  - {fileID: 8300000, guid: c878be31cadd7e84994c17eb019c5f93, type: 3}
+  - {fileID: 8300000, guid: 07a5c865b44ad814fad297761272bad4, type: 3}
+  - {fileID: 8300000, guid: 85df3c0cd4f05a248a17bbbebf49ac8d, type: 3}
+  - {fileID: 8300000, guid: a11e851486f314c41987f81042aa8d27, type: 3}
+  - {fileID: 8300000, guid: e7a744aff8c8a6f4c8f32bb8521b4318, type: 3}
+  - {fileID: 8300000, guid: fec55028569ab7540b7cd16a88806871, type: 3}
+  - {fileID: 8300000, guid: 4908e8ae17c06314581b6c7227e5d76e, type: 3}
+  - {fileID: 8300000, guid: 589054eab4b7ec34e98f049b8d215809, type: 3}
+  - {fileID: 8300000, guid: 0149a7b02a443f645b881b6f99fb8121, type: 3}
+  - {fileID: 8300000, guid: 64f0aa4ff1142ca458851504701f5e21, type: 3}
+  - {fileID: 8300000, guid: 4e824eeb437e8d0438c5178173d3574d, type: 3}
+  - {fileID: 8300000, guid: 7d502b44ebf0ada4c86f629a0c76b7b6, type: 3}
+  - {fileID: 8300000, guid: 9e21746280430fa498e2cc27cef050b0, type: 3}
+  - {fileID: 8300000, guid: ec0cab9411839a84aa463b435a740228, type: 3}
+  - {fileID: 8300000, guid: 1b5dc426e9885f8419a95235e61f8d30, type: 3}
+  - {fileID: 8300000, guid: f949acb96833045438c675f89499fd94, type: 3}
+  - {fileID: 8300000, guid: bb0d9177127e0a141a94f3ad15a83f9a, type: 3}
+  - {fileID: 8300000, guid: 9ee277e990063b843b7737c14ef6dc0b, type: 3}
+  - {fileID: 8300000, guid: 6f7e54b445a1f14428801979490cc6ed, type: 3}
+  - {fileID: 8300000, guid: 9f737084649c1f847b498592150aedea, type: 3}
+  - {fileID: 8300000, guid: b213e665fffc8c3408fae8da841e3ea4, type: 3}
+  - {fileID: 8300000, guid: 5dc1df97574650746a9163fb45bbb89c, type: 3}
+  - {fileID: 8300000, guid: a06bad622a0268c4f8ef3f923293a4d9, type: 3}
   audioSource: {fileID: 1523701036}
   audioMixer: {fileID: 24100000, guid: 851090dc4e910054e8986e24eb7128da, type: 2}
   audioSfx: {fileID: 1523701034}
