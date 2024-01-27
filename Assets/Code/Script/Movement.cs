@@ -42,6 +42,7 @@ public class Movement : MonoBehaviour
         {
             rb.velocity += Vector2.up * Physics2D.gravity.y * (fallMultipier - 1) * Time.deltaTime;
         }
+        Debug.DrawRay(transform.position, Vector2.down * groundCheckRange, Color.red);  
     }
 
     private void Flip()

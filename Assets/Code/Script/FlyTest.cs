@@ -24,7 +24,7 @@ public class FlyTest : MonoBehaviour
     public State enemyState;
     private Collider2D playerDetect => Physics2D.OverlapCircle(transform.position, PlayerDetectRange, mask);
     private Collider2D playerinAttackRange => Physics2D.OverlapCircle(transform.position + (off * -transform.localScale.x), range, player);
-    private int isFacingRight => transform.localScale.x > 0 ? -1 : 1;
+    private int isFacingRight => transform.localScale.x > 0 ? 1 : -1;
 
     private bool isPatrol = true;
     private bool faceRight;
@@ -120,10 +120,10 @@ public class FlyTest : MonoBehaviour
 
     void Flip()
     {
-        faceRight = !faceRight;
         Vector3 LC = transform.localScale;
         LC.x *= -1f;
         transform.localScale = LC;
+        faceRight = !faceRight;
     }
     private void OnDrawGizmos()
     {
