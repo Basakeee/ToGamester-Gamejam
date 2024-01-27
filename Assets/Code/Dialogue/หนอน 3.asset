@@ -12,6 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2610249af588dfc40ac6b344ffd06afe, type: 3}
   m_Name: "\u0E2B\u0E19\u0E2D\u0E19 3"
   m_EditorClassIdentifier: 
-  _DialogueText: "\u0E16\u0E32\u0E21\u0E08\u0E23\u0E34\u0E07\n"
+  _DialogueText: "\u0E40\u0E2D\u0E32\u0E25\u0E48\u0E30 \u0E1C\u0E21\u0E08\u0E30\u0E40\u0E25\u0E48\u0E32\u0E43\u0E2B\u0E49\u0E25\u0E38\u0E07\u0E1F\u0E31---
+    \u0E2B\u0E49\u0E30 \u0E25\u0E38\u0E07\u0E08\u0E30\u0E44\u0E21\u0E48\u0E2D\u0E22\u0E39\u0E48\u0E1F\u0E31\u0E07\u0E2A\u0E31\u0E01\u0E2B\u0E19\u0E48\u0E2D\u0E22\u0E2B\u0E23\u0E2D\n"
   nextDialogue: {fileID: 11400000, guid: a0008622655ae4740aa6567e47dc1fd4, type: 2}
   choice: 1
+  audio: {fileID: 8300000, guid: fec55028569ab7540b7cd16a88806871, type: 3}

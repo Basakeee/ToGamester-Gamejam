@@ -16,3 +16,4 @@ MonoBehaviour:
     \u0E2D\u0E22\u0E48\u0E32\u0E1A\u0E2D\u0E01\u0E19\u0E30 \u0E27\u0E48\u0E32\u0E25\u0E38\u0E07\u0E40\u0E1B\u0E47\u0E19\u0E1C\u0E39\u0E49\u0E01\u0E25\u0E49\u0E32\u0E04\u0E19\u0E19\u0E31\u0E49\u0E19!?"
   nextDialogue: {fileID: 11400000, guid: a747c8be1e36b354e956333ec54c97f4, type: 2}
   choice: 1
+  audio: {fileID: 8300000, guid: a11e851486f314c41987f81042aa8d27, type: 3}

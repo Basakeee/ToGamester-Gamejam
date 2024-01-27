@@ -18,3 +18,4 @@ MonoBehaviour:
     \u0E40\u0E02\u0E49\u0E32\u0E43\u0E08\u0E43\u0E0A\u0E48\u0E1B\u0E48\u0E30 \u0E2E\u0E35\u0E4A\u0E2E\u0E35"
   nextDialogue: {fileID: 11400000, guid: dfe9470ca9354a94699a339b103f90f0, type: 2}
   choice: 1
+  audio: {fileID: 8300000, guid: 6f7e54b445a1f14428801979490cc6ed, type: 3}
