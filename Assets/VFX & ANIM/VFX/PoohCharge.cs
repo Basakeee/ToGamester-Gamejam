@@ -25,11 +25,14 @@ public class PoohCharge : MonoBehaviour
         VisualEffect newDash = Instantiate(_Dash, transform.position, transform.rotation);
         newDash.Play();
         Destroy(newDash, 2.5f);
+        BoxCollider2D collider2D = GetComponent<BoxCollider2D>();
+        collider2D.gameObject.layer = 9;
     }
 
     public void endDash()
     {
-
+        BoxCollider2D collider2D = GetComponent<BoxCollider2D>();
+        collider2D.gameObject.layer = 8;
     }
 
     public void startCharge()

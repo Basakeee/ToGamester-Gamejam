@@ -25,7 +25,7 @@ public class ChangVolumeAnimCurve : MonoBehaviour
             hueShiftLasttime = Time.realtimeSinceStartup;
         }
 
-        float hueShift = hueShiftAnimationCurve.Evaluate(Time.smoothDeltaTime - hueShiftLasttime);
+        float hueShift = hueShiftAnimationCurve.Evaluate(Time.realtimeSinceStartup - hueShiftLasttime);
         colorAdjustments.hueShift.value = hueShift;
 
     }

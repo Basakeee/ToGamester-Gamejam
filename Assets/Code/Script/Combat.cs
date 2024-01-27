@@ -35,7 +35,6 @@ public class Combat : MonoBehaviour
     private bool isATK;
     private bool canTakeDMG = true;
     public Volume volume;
-    public ChangVolumeAnimCurve changeVolumAnim;
     public PlayerVFX playerVFX => GetComponent<PlayerVFX>();
     float time;
 
@@ -113,8 +112,8 @@ public class Combat : MonoBehaviour
         // haunted effect
         if(volume.profile.TryGet(out ColorAdjustments colorAdjustments))
         {
-            colorAdjustments.hueShift.value = 180;
-            changeVolumAnim = GetComponent<ChangVolumeAnimCurve>();
+            colorAdjustments.hueShift.value = -180;
+            StartCoroutine(VolumeCooldown(colorAdjustments));
             playerVFX.CreateHorror();
         }
   
@@ -135,6 +134,13 @@ public class Combat : MonoBehaviour
         yield return new WaitForSeconds(0.5f);
         canTakeDMG = true;
     }
+
+    IEnumerator VolumeCooldown(ColorAdjustments colorAdjustments)
+    {
+        yield return new WaitForSeconds(2f);
+        colorAdjustments.hueShift.value = 0;
+    }
+
     private void OnDrawGizmos()
     { 
         Gizmos.color = Color.green;
