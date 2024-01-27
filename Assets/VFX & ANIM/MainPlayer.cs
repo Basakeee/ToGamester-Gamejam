@@ -38,6 +38,7 @@ public class MainPlayer : MonoBehaviour
     public void SwordSlashStart()
     {
         VisualEffect newSwordSlash = Instantiate(_SlashSword, _SwordPos.position, _SwordPos.rotation);
+        _Damage.Play();
         newSwordSlash.Play();
         Destroy(newSwordSlash, 1.5f);
     }
