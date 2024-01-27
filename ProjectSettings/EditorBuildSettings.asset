@@ -24,4 +24,7 @@ EditorBuildSettings:
     path: "Assets/Scenes/\u0E1A\u0E49\u0E32\u0E19\u0E08\u0E2D\u0E2B\u0E4C\u0E19 (
       End Game ).unity"
     guid: 2479a2561321d6749a8784b7881883ba
+  - enabled: 1
+    path: Assets/Scenes/GameOver.unity
+    guid: ea729f338455ddc4d9874b9470ef79be
   m_configObjects: {}
