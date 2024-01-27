@@ -33,7 +33,7 @@ public class Combat : MonoBehaviour
     }
     public WeaponType currentWeapon;
     #endregion
-    private bool isATK;
+    public bool isATK;
     private bool canTakeDMG = true;
     public Volume volume;
     public PlayerItem item;

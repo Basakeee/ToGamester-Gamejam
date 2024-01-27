@@ -5,9 +5,9 @@ using UnityEngine;
 public class Movement : MonoBehaviour
 {
     #region PlayerModifier
-    private float xAxis => Input.GetAxisRaw("Horizontal");
-    private Rigidbody2D rb => GetComponent<Rigidbody2D>();
-    private bool isGrounded => Physics2D.Raycast(transform.position, Vector2.down, groundCheckRange, layerCheck);
+    public float xAxis => Input.GetAxisRaw("Horizontal");
+    public Rigidbody2D rb => GetComponent<Rigidbody2D>();
+    public bool isGrounded => Physics2D.Raycast(transform.position, Vector2.down, groundCheckRange, layerCheck);
     private bool isFacingRight = true;
     [Header("GroundCheck")] 
     public LayerMask layerCheck;
