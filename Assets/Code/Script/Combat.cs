@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Threading;
 using UnityEngine;
 using UnityEngine.Rendering;
 using UnityEngine.Rendering.Universal;
@@ -34,6 +35,10 @@ public class Combat : MonoBehaviour
     private bool isATK;
     private bool canTakeDMG = true;
     public Volume volume;
+    public ChangVolumeAnimCurve changeVolumAnim;
+    public PlayerVFX playerVFX => GetComponent<PlayerVFX>();
+    float time;
+
     private Vector3 off => offset;
     // Start is called before the first frame update
     void Start()
@@ -108,8 +113,11 @@ public class Combat : MonoBehaviour
         // haunted effect
         if(volume.profile.TryGet(out ColorAdjustments colorAdjustments))
         {
-            colorAdjustments.hueShift.value = -180f;
+            colorAdjustments.hueShift.value = 180;
+            changeVolumAnim = GetComponent<ChangVolumeAnimCurve>();
+            playerVFX.CreateHorror();
         }
+  
     }
     public void iFrame()
     {
