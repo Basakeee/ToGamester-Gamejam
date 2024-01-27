@@ -7,8 +7,8 @@ public class Date : MonoBehaviour
 {
     public TMP_Text monthText;
     public TMP_Text yearText;
-    private int Month;
-    private int Year;
+    public static int Month;
+    public static int Year;
     private void Start()
     {
         Year = 2020;
@@ -43,7 +43,7 @@ public class Date : MonoBehaviour
         if(Year > 0) 
         Year--;
     }
-    public int Calc()
+    public static int Calc()
     {
         return (Year*100) + Month;
     }
