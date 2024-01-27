@@ -66,6 +66,7 @@ public class DialogueSystem : MonoBehaviour
             if (next != null)
             {
                 StartCoroutine(TypeDialogue(next));
+                next.audio.Play();
             }
         }
     }
@@ -81,6 +82,7 @@ public class DialogueSystem : MonoBehaviour
                 if (next != null)
                 {
                     StartCoroutine(TypeDialogue(next));
+                    next.audio.Play();
                 }
             }
     }

@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Threading;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Rendering;
 using UnityEngine.Rendering.Universal;
@@ -70,6 +71,7 @@ public class Combat : MonoBehaviour
     {
         if(!isATK)
         {
+            Debug.Log("Attack");
             StartCoroutine(AttackCooldown(cooldown));
             Collider2D[] hit = Physics2D.OverlapCircleAll(transform.position + (off * transform.localScale.x), range,enemyLayer);
             if (hit != null) 
@@ -78,6 +80,7 @@ public class Combat : MonoBehaviour
                     _en.TryGetComponent<EnemyStats>(out EnemyStats enemy);
                     enemy.TakeDMG(Damage,currentWeapon,transform);
                     Debug.Log(enemy.HP);
+                    Debug.Log(_en.name);
                 }
         }
     }
