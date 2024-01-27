@@ -11,7 +11,6 @@ public class Date : MonoBehaviour
     {
         if(Month % 12 == 0)
         {
-            Year++;
             Month %= 12;
         }
     }
@@ -23,5 +22,17 @@ public class Date : MonoBehaviour
     public void RemoveMonth()
     {
         Month--;
+    }
+    public void AddYear()
+    {
+        Month++;
+    }
+    public void MoveYear()
+    {
+        Month++;
+    }
+    public int Calc()
+    {
+        return (Year*100) + Month;
     }
 }

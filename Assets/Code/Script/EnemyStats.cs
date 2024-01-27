@@ -19,7 +19,7 @@ public class EnemyStats : MonoBehaviour
     {
         
     }
-    public void TakeDMG(int dmg,Combat.WeaponType type,Transform player)
+    public virtual void TakeDMG(int dmg,Combat.WeaponType type,Transform player)
     {
         TakeWeaponDMG(dmg, type);
         int Direction = transform.position.x > player.position.x ? 1 : -1;
@@ -31,7 +31,7 @@ public class EnemyStats : MonoBehaviour
         }
     }
 
-    private void TakeWeaponDMG(int dmg, Combat.WeaponType type)
+    protected void TakeWeaponDMG(int dmg, Combat.WeaponType type)
     {
         if (type == Combat.WeaponType.HolyWeapons)
         {   // Attack Boss
@@ -44,7 +44,7 @@ public class EnemyStats : MonoBehaviour
         if (type == Combat.WeaponType.Hoe)
         {   // Attack Boss
             if (gameObject.CompareTag("Boss"))
-                HP -= dmg * 2;
+                HP -= dmg * 200;
             else // Attack Enemy
                 HP -= dmg;
         }
