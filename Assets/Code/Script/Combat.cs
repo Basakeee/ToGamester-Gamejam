@@ -36,9 +36,8 @@ public class Combat : MonoBehaviour
     private bool isATK;
     private bool canTakeDMG = true;
     public Volume volume;
+    public PlayerItem item;
     public PlayerVFX playerVFX => GetComponent<PlayerVFX>();
-    float time;
-
     private Vector3 off => offset;
     // Start is called before the first frame update
     void Start()
@@ -49,9 +48,10 @@ public class Combat : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        healLeft = item.HealAmount;
         CheckStats();
         PickUpItem();
-        if (Input.GetKeyDown(KeyCode.E) && healLeft > 0)
+        if (Input.GetKeyDown(KeyCode.E) && item.HealAmount > 0)
         {
             Heal(HealAmount);
         }
@@ -88,10 +88,10 @@ public class Combat : MonoBehaviour
     {
         Collider2D[] picks = Physics2D.OverlapBoxAll(transform.position, transform.localScale * 1.2f, 0, itemLayer);
         if(picks != null)
-            foreach (Collider2D item in picks)
+            foreach (Collider2D _item in picks)
             {
-                healLeft++;
-                Destroy(item.gameObject);
+                item.HealAmount++;
+                Destroy(_item.gameObject);
             }
 
     }
@@ -101,6 +101,7 @@ public class Combat : MonoBehaviour
         {
             curHP -= DMG;
             iFrame();
+            Debug.Log(curHP);
           // Particle
         }
         if(curHP <= 0)
@@ -111,7 +112,7 @@ public class Combat : MonoBehaviour
     public void Heal(int heal)
     {
         curHP += heal;
-        healLeft--;
+        item.HealAmount--;
         // haunted effect
         if(volume.profile.TryGet(out ColorAdjustments colorAdjustments))
         {
@@ -134,7 +135,7 @@ public class Combat : MonoBehaviour
     IEnumerator iFrameCooldown()
     {
         canTakeDMG = false;
-        yield return new WaitForSeconds(0.5f);
+        yield return new WaitForSeconds(0.2f);
         canTakeDMG = true;
     }
 

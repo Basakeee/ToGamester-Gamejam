@@ -12,25 +12,30 @@ public class MickeyBoss : Boss
     public Vector2 velocity = Vector2.zero;
     public bool DoneSkill1 = true;
     private bool DoneSkill2 = true;
-    private bool AllSkillDone = true;
+    private Animator anim => GetComponent<Animator>();
     private bool oneTime;
     public float range;
     public LayerMask _layerMask;
     private Rigidbody2D rb => GetComponent<Rigidbody2D>();
-    private Collider2D col;
     private bool faceRight;
-    private bool StartSkill => Physics2D.Raycast(transform.position, Vector2.down, range, _layerMask) && !DoneSkill1;
+    public bool StartSkill;
     private Transform player => GameObject.FindWithTag("Player").transform;
      
     private void Update()
     {
+        StartSkill = Physics2D.Raycast(transform.position, Vector2.down, range, _layerMask) && !DoneSkill1;
         _Time += Time.deltaTime;
-        if (_Time > Cooldown[0] && DoneSkill1 && AllSkillDone)
+        if (_Time > Cooldown[0] && DoneSkill1 && !oneTime)
         {
             Skill();
         }
-        if (StartSkill && !oneTime)
-            CreateSkill();
+        if(_Time > Cooldown[1] + Cooldown[0] && DoneSkill2) 
+        {
+            Skill2();
+            _Time = 0;
+            DoneSkill2 = true;
+            oneTime = false;
+        }
         Debug.DrawRay(transform.position, Vector2.down * range, Color.red);
     }
     public override void TakeDMG(int dmg, Combat.WeaponType type, Transform player)
@@ -45,8 +50,15 @@ public class MickeyBoss : Boss
     public override void Skill() // Jump
     {
         DoneSkill1 = false;
-        rb.AddForce(Vector2.up * 8, ForceMode2D.Impulse);
+        rb.AddForce(new Vector2(2,8), ForceMode2D.Impulse);
+        CreateSkill();
         StartCoroutine(addRemoveRange());
+    }
+    public override void Skill2()
+    {
+        DoneSkill2 = false;
+        anim.SetTrigger("Attack");
+        DoneSkill2 = true;
     }
 
     private void CreateSkill()
@@ -72,11 +84,6 @@ public class MickeyBoss : Boss
                     Flip(skill);
             }
         }
-    }
-
-    public override void Skill2()
-    {
-
     }
     void Flip(Rigidbody2D _Skill)
     {

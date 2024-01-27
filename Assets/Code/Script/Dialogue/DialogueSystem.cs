@@ -24,6 +24,7 @@ public class DialogueSystem : MonoBehaviour
         currentDialogue = nextDialogue;
         ClearDialogue();
         StartCoroutine(TypeDialogue(nextDialogue));
+        npc.audio.Play();
         dialogueGroup.alpha = 1;
         button.interactable = true;
         endDialogue = false;
