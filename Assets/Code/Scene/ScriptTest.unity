@@ -309,7 +309,7 @@ GameObject:
   - component: {fileID: 155980210}
   m_Layer: 8
   m_Name: Circle
-  m_TagString: Enemy
+  m_TagString: Boss
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -326,7 +326,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1085add3b6b200342b0aabb0a29df881, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  HP: 100
+  HP: 10
   ParticleSystem: {fileID: 0}
   KnockbackForce: 5
 --- !u!212 &155980208
@@ -2259,6 +2259,14 @@ PrefabInstance:
       propertyPath: volume
       value: 
       objectReference: {fileID: 915634776}
+    - target: {fileID: 3116271401219278498, guid: 6245534eae965ed41af07a6e2a2c3ba9, type: 3}
+      propertyPath: currentWeapon
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3116271401219278498, guid: 6245534eae965ed41af07a6e2a2c3ba9, type: 3}
+      propertyPath: enemyLayer.m_Bits
+      value: 256
+      objectReference: {fileID: 0}
     - target: {fileID: 5117793770279985815, guid: 6245534eae965ed41af07a6e2a2c3ba9, type: 3}
       propertyPath: m_Name
       value: Capsule

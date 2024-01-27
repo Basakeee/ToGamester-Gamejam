@@ -8,17 +8,7 @@ public class EnemyStats : MonoBehaviour
     public ParticleSystem ParticleSystem;
     public float KnockbackForce;
     private Rigidbody2D rb => GetComponent<Rigidbody2D>();
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
     public virtual void TakeDMG(int dmg,Combat.WeaponType type,Transform player)
     {
         TakeWeaponDMG(dmg, type);
