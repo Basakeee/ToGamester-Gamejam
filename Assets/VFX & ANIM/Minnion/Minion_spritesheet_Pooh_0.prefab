@@ -14,7 +14,8 @@ GameObject:
   - component: {fileID: 5809149208475395358}
   - component: {fileID: 3472928848961134254}
   - component: {fileID: 7297217901845259943}
-  m_Layer: 0
+  - component: {fileID: 5414094152294963506}
+  m_Layer: 8
   m_Name: Minion_spritesheet_Pooh_0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -114,7 +115,7 @@ MonoBehaviour:
   range: 1
   dmg: 2
   atkCooldown: 1.75
-  offset: {x: 1, y: 0}
+  offset: {x: 0.22, y: 0}
   enemyState: 0
 --- !u!50 &5809149208475395358
 Rigidbody2D:
@@ -209,3 +210,18 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &5414094152294963506
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5464482351870637501}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1085add3b6b200342b0aabb0a29df881, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  HP: 5
+  ParticleSystem: {fileID: 0}
+  KnockbackForce: 100

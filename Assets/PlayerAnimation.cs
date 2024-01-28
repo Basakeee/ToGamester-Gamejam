@@ -31,7 +31,7 @@ public class PlayerAnimation : MonoBehaviour
 
         if (comBat.currentWeapon == Combat.WeaponType.HolyWeapons)
         {
-            Debug.Log(moveMent.rb.velocity.magnitude);
+            
             animator.SetBool("HOLYJUMP", !moveMent.isGrounded);
             animator.SetFloat("HOLYWALK", Mathf.Abs(moveMent.xAxis));
             if (comBat.isATK)
