@@ -25,6 +25,9 @@ EditorBuildSettings:
       End Game ).unity"
     guid: 2479a2561321d6749a8784b7881883ba
   - enabled: 1
+    path: Assets/Scenes/FakeEndGame.unity
+    guid: af7b68a8b515322408e54b421f9c298e
+  - enabled: 1
     path: Assets/Scenes/GameOver.unity
     guid: ea729f338455ddc4d9874b9470ef79be
   m_configObjects: {}
