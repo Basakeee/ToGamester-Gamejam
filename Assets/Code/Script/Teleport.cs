@@ -20,12 +20,12 @@ public class Teleport : MonoBehaviour
             if (gameObject.name == "Door" && isBosskilled) // Boss Door
             {
                 Debug.Log("Boss Door");
-                //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+                SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
             }
             else if(gameObject.name != "Door") // Normal Door
             {
                 Debug.Log("Normal DOor");
-                //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+                SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
             }
         }
 

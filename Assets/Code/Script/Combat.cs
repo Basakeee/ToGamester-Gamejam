@@ -90,8 +90,16 @@ public class Combat : MonoBehaviour
         if(picks != null)
             foreach (Collider2D _item in picks)
             {
-                item.HealAmount++;
-                Destroy(_item.gameObject);
+                if (_item.gameObject.layer == LayerMask.NameToLayer("Item"))
+                {
+                    item.HealAmount++;
+                    Destroy(_item.gameObject);
+                }
+                if (_item.gameObject.layer == LayerMask.NameToLayer("Holy"))
+                {
+                    currentWeapon = Combat.WeaponType.HolyWeapons;
+                    Destroy(_item.gameObject);
+                }
             }
 
     }
@@ -103,10 +111,6 @@ public class Combat : MonoBehaviour
             iFrame();
             Debug.Log(curHP);
           // Particle
-        }
-        if(curHP <= 0)
-        {
-            Destroy(gameObject);
         }
     }
     public void Heal(int heal)
@@ -124,6 +128,7 @@ public class Combat : MonoBehaviour
     }
     public void iFrame()
     {
+        if(canTakeDMG)
         StartCoroutine(iFrameCooldown());
     }
     IEnumerator AttackCooldown(float CD)
