@@ -27,9 +27,7 @@ public class MusicControt : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.E))
         {
-            // เปลี่ยนค่าของ audioSfx.clip เป็นคลิปเสียง audioClips[1] เมื่อกดแป้น E อีกครั้ง
-
-                audioSfx.clip = audioClips[1];
+               audioSfx.clip = audioClips[1];
             
             audioSfx.Play();
 

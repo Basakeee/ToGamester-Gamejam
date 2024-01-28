@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Audio;
 using UnityEngine.UIElements;
 
 public class MickeyBoss : Boss
@@ -19,6 +20,11 @@ public class MickeyBoss : Boss
     private Rigidbody2D rb => GetComponent<Rigidbody2D>();
     private bool faceRight;
     public bool StartSkill;
+    public AudioClip[] audioClips;
+    public AudioMixer audioMixer;
+    public AudioSource audioBoom;
+    public AudioSource audiogun;
+    public AudioSource audiodie;
     private Transform player => GameObject.FindWithTag("Player").transform;
      
     private void Update()
@@ -28,10 +34,14 @@ public class MickeyBoss : Boss
         if (_Time > Cooldown[0] && DoneSkill1 && !oneTime)
         {
             Skill();
+            audioBoom.clip = audioClips[0];
+            audioBoom.Play();
         }
         if(_Time > Cooldown[1] + Cooldown[0] && DoneSkill2) 
         {
             Skill2();
+            audiogun.clip = audioClips[1];
+            audiogun.Play();
             _Time = 0;
             DoneSkill2 = true;
             oneTime = false;
@@ -43,6 +53,8 @@ public class MickeyBoss : Boss
         TakeWeaponDMG(dmg, type);
         if (HP <= 0)
         {
+            audioBoom.clip = audioClips[2];
+            audioBoom.Play();
             Destroy(gameObject);
             Instantiate(ParticleSystem, transform.position, Quaternion.identity);
         }

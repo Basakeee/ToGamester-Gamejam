@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.Audio;
 
 public class PoohBoss : Boss
 {
@@ -18,10 +19,18 @@ public class PoohBoss : Boss
     public bool Charging;
     private bool isFacingRight;
     private Collider2D[] hit;
+
+    public AudioClip[] audioClips;
+    public AudioMixer audioMixer;
+    public AudioSource audiodie;
+    public AudioSource audioCharge;
+    
     public override void TakeDMG(int dmg, Combat.WeaponType type, Transform player)
     {
         TakeWeaponDMG(dmg, type);
         if (HP <= 0)
+            audiodie.clip = audioClips[0];
+        audiodie.Play();
         {
             Destroy(gameObject);
             Instantiate(ParticleSystem, transform.position, Quaternion.identity);
@@ -65,6 +74,8 @@ public class PoohBoss : Boss
     }
     IEnumerator waitBeforeDash()
     {
+        audiodie.clip = audioClips[1];
+        audiodie.Play();
         yield return new WaitForSeconds(1.5f);
         float Direct = transform.position.x > player.transform.position.x ? -1 : 1;
         
