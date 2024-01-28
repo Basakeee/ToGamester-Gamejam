@@ -220,7 +220,7 @@ MonoBehaviour:
   pointA: {fileID: 1686558432}
   pointB: {fileID: 623650846}
   CurrentPoint: {fileID: 0}
-  speed: 20
+  speed: 10
   mask:
     serializedVersion: 2
     m_Bits: 1024
@@ -229,7 +229,7 @@ MonoBehaviour:
     m_Bits: 1024
   PlayerDetectRange: 6
   range: 1
-  dmg: 0
+  dmg: 2
   atkCooldown: 1.75
   offset: {x: 1.92, y: 0}
   enemyState: 0
@@ -1072,6 +1072,8 @@ GameObject:
   - component: {fileID: 1380840316}
   - component: {fileID: 1380840315}
   - component: {fileID: 1380840318}
+  - component: {fileID: 1380840319}
+  - component: {fileID: 1380840320}
   m_Layer: 10
   m_Name: Square (3)
   m_TagString: Untagged
@@ -1185,7 +1187,7 @@ Transform:
   m_GameObject: {fileID: 1380840314}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 9.6, y: 5.44, z: 0}
+  m_LocalPosition: {x: -17.68, y: -0.07, z: 0}
   m_LocalScale: {x: 1.3388504, y: 1.5103745, z: 0.67296}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1205,10 +1207,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHP: 10
   curHP: 0
-  Damage: 0
-  cooldown: 0
-  offset: {x: 0, y: 0}
-  range: 0
+  Damage: 5
+  cooldown: 1
+  offset: {x: 0.94, y: 0}
+  range: 0.88
   enemyLayer:
     serializedVersion: 2
     m_Bits: 0
@@ -1218,7 +1220,58 @@ MonoBehaviour:
   HealAmount: 0
   healLeft: 0
   currentWeapon: 0
+  isATK: 0
   volume: {fileID: 0}
+  item: {fileID: 11400000, guid: eada2f92c1bac8c4abfa0dd8fc9b93b2, type: 2}
+--- !u!114 &1380840319
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1380840314}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 461d5230de6da7e4dbc7a20cc2ec5b53, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  layerCheck:
+    serializedVersion: 2
+    m_Bits: 8
+  groundCheckRange: 1.5
+  dashingPower: 50
+  dashingCooldown: 1
+  dust: {fileID: 0}
+  speed: 6
+  jumpPower: 4
+  fallMultipier: 2.5
+--- !u!50 &1380840320
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1380840314}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 4
 --- !u!1 &1457203503
 GameObject:
   m_ObjectHideFlags: 0

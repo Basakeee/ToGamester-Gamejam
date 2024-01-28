@@ -621,7 +621,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!212 &1323916197
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -705,6 +705,7 @@ MonoBehaviour:
   HP: 100
   ParticleSystem: {fileID: 0}
   KnockbackForce: 0
+  isKnockback: 0
   Cooldown:
   - 3
   - 6
@@ -944,7 +945,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!212 &1570254233
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1027,6 +1028,7 @@ MonoBehaviour:
   HP: 20
   ParticleSystem: {fileID: 0}
   KnockbackForce: 0
+  isKnockback: 0
   Cooldown:
   - 6
   chargeSpeed: 50

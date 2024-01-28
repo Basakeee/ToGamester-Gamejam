@@ -65,6 +65,11 @@ public class PoohBoss : Boss
                 Charging = false;
             }
         }
+        if(HP <= 0)
+        {
+            Teleport teleport = GameObject.Find("Door").GetComponent<Teleport>();
+            teleport.isBosskilled = true;
+        }
     }
     public override void Skill()
     {
