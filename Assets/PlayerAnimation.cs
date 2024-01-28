@@ -18,7 +18,6 @@ public class PlayerAnimation : MonoBehaviour
     {
         if (comBat.currentWeapon == Combat.WeaponType.Hoe)
         {
-            Debug.Log(moveMent.rb.velocity.magnitude);
             animator.SetBool("Jump", !moveMent.isGrounded);
             animator.SetFloat("Walk", Mathf.Abs(moveMent.xAxis));
             if (comBat.isATK)
@@ -26,6 +25,9 @@ public class PlayerAnimation : MonoBehaviour
             if (comBat.curHP <= 0)
             {
                 animator.SetTrigger("Die");
+                Destroy(gameObject, 4f);
+                comBat.enabled = false;
+                moveMent.enabled = false;
             }
         }
 
@@ -36,10 +38,6 @@ public class PlayerAnimation : MonoBehaviour
             animator.SetFloat("HOLYWALK", Mathf.Abs(moveMent.xAxis));
             if (comBat.isATK)
                 animator.SetTrigger("HOLYATTACK");
-            if (comBat.curHP <= 0)
-            {
-                animator.SetTrigger("Die");
-            }
         }
     }
 }

@@ -11,12 +11,13 @@ public class PoohBoss : Boss
     public Vector2 _area;
     public LayerMask _layerMask;
     public Vector2 offset;
+    public int BossDamage;
     private Vector3 off => offset;
     private Rigidbody2D rb => GetComponent<Rigidbody2D>();
     private Transform player => GameObject.FindWithTag("Player").transform;
     public bool Charging;
     private bool isFacingRight;
-    private Collider2D hit;
+    private Collider2D[] hit;
     public override void TakeDMG(int dmg, Combat.WeaponType type, Transform player)
     {
         TakeWeaponDMG(dmg, type);
@@ -37,13 +38,21 @@ public class PoohBoss : Boss
         }
         if (Charging && anim.GetCurrentAnimatorStateInfo(0).IsName("Base Layer.Dash"))
         {
-            hit = Physics2D.OverlapBox(transform.position + off, _area, 0, _layerMask);
+            hit = Physics2D.OverlapBoxAll(transform.position + off, _area, 0, _layerMask);
             if(hit != null) 
             { 
+                foreach (Collider2D col in hit)
+                {
+                    if (col.TryGetComponent<Combat>(out Combat _player))
+                    {
+                        _player.TakeDMG(BossDamage);
+                        hit = null;
+                        break;
+                    }
+                }
                 Debug.Log(hit);
                 anim.Play("Base Layer.pooh", 0, 0f);
                 rb.velocity = Vector2.zero;
-                hit = null;
                 Charging = false;
             }
         }

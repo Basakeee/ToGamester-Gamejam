@@ -374,11 +374,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2128493504019953763, guid: 6245534eae965ed41af07a6e2a2c3ba9, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 2.95
+      value: -7.91
       objectReference: {fileID: 0}
     - target: {fileID: 2128493504019953763, guid: 6245534eae965ed41af07a6e2a2c3ba9, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.92
+      value: -0.39
       objectReference: {fileID: 0}
     - target: {fileID: 2128493504019953763, guid: 6245534eae965ed41af07a6e2a2c3ba9, type: 3}
       propertyPath: m_LocalPosition.z
@@ -412,6 +412,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3116271401219278498, guid: 6245534eae965ed41af07a6e2a2c3ba9, type: 3}
+      propertyPath: item
+      value: 
+      objectReference: {fileID: 11400000, guid: eada2f92c1bac8c4abfa0dd8fc9b93b2, type: 2}
     - target: {fileID: 3116271401219278498, guid: 6245534eae965ed41af07a6e2a2c3ba9, type: 3}
       propertyPath: currentWeapon
       value: 0
@@ -617,7 +621,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!212 &1323916197
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -679,7 +683,7 @@ Transform:
   m_GameObject: {fileID: 1323916196}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 7.1, y: 0.47, z: 3.63}
+  m_LocalPosition: {x: 5.67, y: 10.9, z: 3.63}
   m_LocalScale: {x: 4.7123, y: 4.7123, z: 4.7123}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -940,7 +944,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!212 &1570254233
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1002,7 +1006,7 @@ Transform:
   m_GameObject: {fileID: 1570254232}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -11.54, y: 2.06, z: 0}
+  m_LocalPosition: {x: 12.49, y: 9.81, z: 0}
   m_LocalScale: {x: 12.358, y: 12.358, z: 12.358}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1032,6 +1036,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 1032
   offset: {x: -2.46, y: -0.92}
+  BossDamage: 0
   Charging: 0
 --- !u!50 &1570254236
 Rigidbody2D:
