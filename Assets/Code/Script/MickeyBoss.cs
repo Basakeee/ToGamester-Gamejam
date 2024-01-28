@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UIElements;
 
 public class MickeyBoss : Boss
@@ -37,6 +38,10 @@ public class MickeyBoss : Boss
             oneTime = false;
         }
         Debug.DrawRay(transform.position, Vector2.down * range, Color.red);
+        if(HP <= 0)
+        {
+            SceneManager.LoadScene(5);
+        }
     }
     public override void TakeDMG(int dmg, Combat.WeaponType type, Transform player)
     {

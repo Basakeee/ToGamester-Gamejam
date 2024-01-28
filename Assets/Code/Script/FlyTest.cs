@@ -16,6 +16,7 @@ public class FlyTest : MonoBehaviour
     public float atkCooldown;
     public Vector2 offset;
     private Vector3 off => offset;
+    private EnemyStats es => GetComponent<EnemyStats>();
     public enum State
     {
         Patrol,
@@ -38,10 +39,14 @@ public class FlyTest : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (isPatrol)
-            Route();
+        if (!es.isKnockback)
+        {
+            if (isPatrol)
+                Route();
 
-        FindPlayer();
+            FindPlayer();
+
+        }
     }
 
     private void FindPlayer()
@@ -84,7 +89,6 @@ public class FlyTest : MonoBehaviour
             if (!faceRight && transform.position.x < playerDetect.transform.position.x)
                 Flip();
     }
-
     private void Route()
     {
         enemyState = State.Patrol;

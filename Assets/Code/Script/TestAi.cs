@@ -20,6 +20,7 @@ public class TestAi : MonoBehaviour
     public float atkCooldown;
     public Vector2 offset;
     private Vector3 off => offset;
+    private EnemyStats es => GetComponent<EnemyStats>();
     public enum State
     {
         Patrol,
@@ -47,10 +48,14 @@ public class TestAi : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (isPatrol)
-            Route();
+        if(!es.isKnockback)
+        {
+            if (isPatrol)
+                Route();
 
-        FindPlayer();
+            FindPlayer();
+
+        }
         ShowRay();
     }
 

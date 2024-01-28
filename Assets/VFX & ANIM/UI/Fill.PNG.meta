@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: c1dd1bcbfb4bae94a84c57818ca328eb
+guid: 467ded1839f13aa4a8d0060f26f3f0d1
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -34,7 +34,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 0
+    filterMode: 1
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -72,7 +72,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -110,22 +110,22 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: UI_Setting_fill_0
+      name: Fill_0
       rect:
         serializedVersion: 2
-        x: 237
-        y: 16
-        width: 1443
-        height: 169
+        x: 235
+        y: 30
+        width: 1446
+        height: 147
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
-      border: {x: 54, y: 0, z: 0, w: 0}
+      border: {x: 65, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: afb80af901c804a46bfa89822313a8fc
-      internalID: 327130670
+      spriteID: b3488aee4827e8441a66b783a0f36ef2
+      internalID: -1778716148
       vertices: []
       indices: 
       edges: []
@@ -141,7 +141,7 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      UI_Setting_fill_0: 327130670
+      Fill_0: -1778716148
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

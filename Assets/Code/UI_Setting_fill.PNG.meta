@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: c1dd1bcbfb4bae94a84c57818ca328eb
+guid: 9c8b912d39a011548876d593bf803c9f
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -34,7 +34,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 0
+    filterMode: 1
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -72,7 +72,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -118,14 +118,14 @@ TextureImporter:
         width: 1443
         height: 169
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 54, y: 0, z: 0, w: 0}
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: afb80af901c804a46bfa89822313a8fc
-      internalID: 327130670
+      spriteID: fc1fa1cc7240dca48a80fc3e77567562
+      internalID: 1572587579
       vertices: []
       indices: 
       edges: []
@@ -141,7 +141,7 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      UI_Setting_fill_0: 327130670
+      UI_Setting_fill_0: 1572587579
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

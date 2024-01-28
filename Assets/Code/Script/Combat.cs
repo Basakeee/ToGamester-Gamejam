@@ -5,6 +5,7 @@ using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Rendering;
 using UnityEngine.Rendering.Universal;
+using UnityEngine.SceneManagement;
 
 public class Combat : MonoBehaviour
 {
@@ -111,6 +112,11 @@ public class Combat : MonoBehaviour
             iFrame();
             Debug.Log(curHP);
           // Particle
+        }
+        if (curHP <= 0)
+        {
+            Destroy(gameObject, 5f);
+            SceneManager.LoadScene("GameOver");
         }
     }
     public void Heal(int heal)
