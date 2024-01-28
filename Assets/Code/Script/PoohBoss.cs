@@ -13,16 +13,17 @@ public class PoohBoss : Boss
     public LayerMask _layerMask;
     public Vector2 offset;
     public int BossDamage;
+    public Vector2 detectRange;
+    public LayerMask playerLayer;
+    public bool isPlayerinRange => Physics2D.OverlapBox(transform.position, detectRange, 0,playerLayer) != null ? true : false;
+    public Vector2 offsetBossDetect;
+    private Vector3 offBossDetect => offsetBossDetect;
     private Vector3 off => offset;
     private Rigidbody2D rb => GetComponent<Rigidbody2D>();
     private Transform player => GameObject.FindWithTag("Player").transform;
     public bool Charging;
     private bool isFacingRight;
     private Collider2D[] hit;
-
-    public AudioClip[] audioClips;
-    public AudioMixer audioMixer;
-    public AudioSource audiodie;
     public AudioSource audioCharge;
     
     public override void TakeDMG(int dmg, Combat.WeaponType type, Transform player)
@@ -38,37 +39,40 @@ public class PoohBoss : Boss
     }
     private void Update()
     {
-        if(!Charging)
-        _Time += Time.deltaTime;
-        if(_Time > Cooldown[0] && !Charging)
+        if (isPlayerinRange)
         {
-            Skill();
-            _Time = 0;
-        }
-        if (Charging && anim.GetCurrentAnimatorStateInfo(0).IsName("Base Layer.Dash"))
-        {
-            hit = Physics2D.OverlapBoxAll(transform.position + off, _area, 0, _layerMask);
-            if(hit != null) 
-            { 
-                foreach (Collider2D col in hit)
-                {
-                    if (col.TryGetComponent<Combat>(out Combat _player))
-                    {
-                        _player.TakeDMG(BossDamage);
-                        hit = null;
-                        break;
-                    }
-                }
-                Debug.Log(hit);
-                anim.Play("Base Layer.pooh", 0, 0f);
-                rb.velocity = Vector2.zero;
-                Charging = false;
+            if (!Charging)
+                _Time += Time.deltaTime;
+            if (_Time > Cooldown[0] && !Charging)
+            {
+                Skill();
+                _Time = 0;
             }
-        }
-        if(HP <= 0)
-        {
-            Teleport teleport = GameObject.Find("Door").GetComponent<Teleport>();
-            teleport.isBosskilled = true;
+            if (Charging && anim.GetCurrentAnimatorStateInfo(0).IsName("Base Layer.Dash"))
+            {
+                hit = Physics2D.OverlapBoxAll(transform.position + off, _area, 0, _layerMask);
+                if (hit != null)
+                {
+                    foreach (Collider2D col in hit)
+                    {
+                        if (col.TryGetComponent<Combat>(out Combat _player))
+                        {
+                            _player.TakeDMG(BossDamage);
+                            hit = null;
+                            break;
+                        }
+                    }
+                    Debug.Log(hit);
+                    anim.Play("Base Layer.pooh", 0, 0f);
+                    rb.velocity = Vector2.zero;
+                    Charging = false;
+                }
+            }
+            if (HP <= 0)
+            {
+                Teleport teleport = GameObject.Find("Door").GetComponent<Teleport>();
+                teleport.isBosskilled = true;
+            }
         }
     }
     public override void Skill()
@@ -102,5 +106,7 @@ public class PoohBoss : Boss
     {
         Gizmos.color = Color.yellow;
         Gizmos.DrawWireCube(transform.position + off, _area);
+        Gizmos.color = Color.red;
+        Gizmos.DrawWireCube(transform.position + offBossDetect, detectRange);
     }
 }

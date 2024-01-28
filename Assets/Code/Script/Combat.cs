@@ -146,7 +146,7 @@ public class Combat : MonoBehaviour
     IEnumerator iFrameCooldown()
     {
         canTakeDMG = false;
-        yield return new WaitForSeconds(0.2f);
+        yield return new WaitForSeconds(0.35f);
         canTakeDMG = true;
     }
 

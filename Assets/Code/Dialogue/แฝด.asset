@@ -15,3 +15,4 @@ MonoBehaviour:
   _DialogueText: "\u0E27\u0E39\u0E1F \u0E27\u0E39\u0E1F \u0E27\u0E39\u0E1F\n"
   nextDialogue: {fileID: 11400000, guid: 6411955f117a488459c299b91468728b, type: 2}
   choice: 1
+  audio: {fileID: 8300000, guid: 64f0aa4ff1142ca458851504701f5e21, type: 3}

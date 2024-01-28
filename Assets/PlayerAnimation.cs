@@ -2,15 +2,16 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Audio;
+using UnityEngine.UIElements;
 
 public class PlayerAnimation : MonoBehaviour
 {
     public Movement moveMent => GetComponent<Movement>();
     public Animator animator => GetComponent<Animator>();
     private Combat comBat => GetComponent<Combat>();
+    private bool attackSoundDone;
 
     public AudioClip[] audioClips;
-    public AudioMixer audioMixer;
     public AudioSource audioattack;
     public AudioSource audiojump;
     public AudioSource audiowalk;
@@ -20,17 +21,24 @@ public class PlayerAnimation : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
+        attackSoundDone = true;
     }
 
     // Update is called once per frame
     void Update()
     {
+        Debug.Log(Mathf.Abs(moveMent.xAxis));
         if (comBat.currentWeapon == Combat.WeaponType.Hoe)
         {
-            if (moveMent.isGrounded && Input.GetKeyDown(KeyCode.Space))
+                Debug.Log(moveMent.isGrounded && Input.GetKeyDown(KeyCode.Space));
+            if (moveMent.isGrounded)
             {
-                animator.SetBool("Jump", !moveMent.isGrounded);
+                if(Input.GetKeyDown(KeyCode.Space))
+                {
+                    animator.SetBool("Jump", moveMent.isGrounded);
+                }
+                else
+                    animator.SetBool("Jump",!moveMent.isGrounded);
 
                 audiojump.clip = audioClips[0];
 
@@ -38,18 +46,20 @@ public class PlayerAnimation : MonoBehaviour
 
             }
 
-            if (Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.D))
+            animator.SetFloat("Walk", Mathf.Abs(moveMent.xAxis));
+            if (Mathf.Abs(moveMent.xAxis) > 0 && (Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.D)))
             {
-                animator.SetFloat("Walk", Mathf.Abs(moveMent.xAxis));
+                StartCoroutine(soundCD(0.5f));
                 audiowalk.clip = audioClips[1];
                 audiowalk.Play();
             }
 
 
-            if (comBat.isATK)
+            if (comBat.isATK && attackSoundDone)
             {
                 audioattack.clip = audioClips[2];
                 audioattack.Play();
+                StartCoroutine(soundCD(1));
 
                 animator.SetTrigger("Attack");
             }
@@ -70,27 +80,38 @@ public class PlayerAnimation : MonoBehaviour
 
         if (comBat.currentWeapon == Combat.WeaponType.HolyWeapons)
         {
-            if (moveMent.isGrounded && Input.GetKeyDown(KeyCode.Space))
+            if (moveMent.isGrounded)
             {
-                animator.SetBool("HOLYJUMP", !moveMent.isGrounded);
+                if (Input.GetKeyDown(KeyCode.Space))
+                {
+                    animator.SetBool("HOLYJUMP", moveMent.isGrounded);
+                }
+                else
+                    animator.SetBool("HOLYJUMP", !moveMent.isGrounded);
                 audiojump.clip = audioClips[0];
 
                 audiojump.Play();
 
-            }
-            if (Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.D))
-            {
                 animator.SetFloat("HOLYWALK", Mathf.Abs(moveMent.xAxis));
+            }
+            if (Mathf.Abs(moveMent.xAxis) > 0 && (Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.D)))
+            {
                 audiowalk.clip = audioClips[1];
                 audiowalk.Play();
             }
-            if (comBat.isATK)
-
+            if (comBat.isATK && attackSoundDone)
             {
                 audioattack.clip = audioClips[2];
                 audioattack.Play();
+                StartCoroutine(soundCD(1));
                 animator.SetTrigger("HOLYATTACK");
             }
         }
+    }
+    IEnumerator soundCD(float CD)
+    {
+        attackSoundDone = false;
+        yield return new WaitForSeconds(CD);
+        attackSoundDone = true;
     }
 }

@@ -16,3 +16,4 @@ MonoBehaviour:
     \u0E27\u0E39\u0E1F\u0E46?\n"
   nextDialogue: {fileID: 11400000, guid: 39b705d586d585f41a1ebe20733c9197, type: 2}
   choice: 1
+  audio: {fileID: 8300000, guid: 4e824eeb437e8d0438c5178173d3574d, type: 3}

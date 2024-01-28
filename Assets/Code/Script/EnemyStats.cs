@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Audio;
+using UnityEngine.SceneManagement;
 
 public class EnemyStats : MonoBehaviour
 {
@@ -12,7 +13,6 @@ public class EnemyStats : MonoBehaviour
     private Rigidbody2D rb => GetComponent<Rigidbody2D>();
 
     public AudioClip[] audioClips;
-    public AudioMixer audioMixer;
     public AudioSource audiodie;
 
     public virtual void TakeDMG(int dmg,Combat.WeaponType type,Transform player)
@@ -21,13 +21,9 @@ public class EnemyStats : MonoBehaviour
         int Direction = transform.position.x > player.position.x ? 1 : -1;
         rb.AddForce(transform.right * Direction * KnockbackForce,ForceMode2D.Impulse);
         StartCoroutine(knockBack());
-        if (HP <= 0)
-            audiodie.clip = audioClips[0];
-        audiodie.Play();
-        {
-            Destroy(gameObject);
-            Instantiate(ParticleSystem, transform.position, Quaternion.identity);
-        }
+        audiodie.PlayOneShot(audioClips[0]);
+        Destroy(gameObject);
+        Instantiate(ParticleSystem, transform.position, Quaternion.identity);
     }
 
     public virtual void TakeWeaponDMG(int dmg, Combat.WeaponType type)
@@ -46,6 +42,22 @@ public class EnemyStats : MonoBehaviour
                 HP -= dmg * 200;
             else // Attack Enemy
                 HP -= dmg;
+        }
+        if (HP <= 0)
+        {
+            if (gameObject.tag == "Boss")
+            {
+                Destroy(gameObject);
+                SceneManager.LoadScene("ºéÒ¹¨ÍËì¹ ( End Game )");
+            }
+            if (gameObject.TryGetComponent<PoohBoss>(out PoohBoss pooh))
+            {
+                Destroy(pooh.gameObject);
+                Teleport teleport = GameObject.Find("Door").GetComponent<Teleport>();
+                teleport.isBosskilled = true;
+            }
+            else
+                Destroy(gameObject);
         }
     }
     IEnumerator knockBack()

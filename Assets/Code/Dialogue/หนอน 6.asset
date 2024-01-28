@@ -15,4 +15,4 @@ MonoBehaviour:
   _DialogueText: "\u0E44\u0E21\u0E48\u0E04\u0E34\u0E14\u0E08\u0E30\u0E2A\u0E19\u0E43\u0E08\u0E40\u0E25\u0E22\u0E2B\u0E23\u0E2D"
   nextDialogue: {fileID: 0}
   choice: 0
-  audio: {fileID: 0}
+  audio: {fileID: 8300000, guid: 0149a7b02a443f645b881b6f99fb8121, type: 3}
