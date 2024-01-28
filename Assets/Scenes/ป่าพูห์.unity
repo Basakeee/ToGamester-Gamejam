@@ -9424,6 +9424,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 1032
   offset: {x: -0.35, y: 1.02}
+  BossDamage: 3
   Charging: 0
 --- !u!1 &2019612666
 GameObject:
