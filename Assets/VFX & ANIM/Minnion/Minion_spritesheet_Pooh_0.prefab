@@ -222,6 +222,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1085add3b6b200342b0aabb0a29df881, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  HP: 5
+  HP: 10
   ParticleSystem: {fileID: 0}
   KnockbackForce: 100
